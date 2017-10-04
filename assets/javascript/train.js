@@ -41,7 +41,7 @@
      $("#frequency").val("");
  });
 
-// Everytime a new train object is added to the databse, a 'snapshot' is taken of the current state and rendered to html elements
+// A 'snapshot' is taken of the current data state everytime a new HTML child is added, in this case, new table cells
  database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
      var trainName = childSnapshot.val().name;
@@ -60,6 +60,6 @@
      var minCalc = moment(frequencyFormat - minAway, "m").format("m");
      var nextTrain = moment().add(minCalc, "minutes").format("h:mm a");
 
-// New html tables for train info
+// New HTML tables rendered from the database
      $("#new-train-disp > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequencyFormat + "</td><td>" + nextTrain + "</td><td>" + minCalc + "</td></tr>");
  });
