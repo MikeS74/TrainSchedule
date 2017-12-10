@@ -1,7 +1,7 @@
-# HW - {train-time-firebase}
+# Train Schedule
 
 ## Live Link
- - https://mikes74.github.io/train-time-firebase/
+ - https://mikes74.github.io/TrainSchedule/
 
 ## Add train destinations and time of first arrival to see when the next train is coming and how long you will have to wait for it. 
 
